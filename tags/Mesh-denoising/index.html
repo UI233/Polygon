@@ -3,7 +3,7 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   
-  <title>Polygon</title>
+  <title>Mesh denoising | Polygon</title>
   <meta name="author" content="uiui">
   
   
@@ -44,94 +44,25 @@
 </header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper">
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2019-03-03T00:57:25.000Z"><a href="/Polygon/2019/03/03/Smooth-the-Mesh/">2019-03-03</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/Polygon/2019/03/03/Smooth-the-Mesh/">Smooth the Mesh</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>I recently got interested in the field <em>Geometry Processing</em> and  I decided to start my learning on <em>Geometry Processing</em> from a relatively simple topic — <em>Mesh Denoising</em>, which may sound strange for most people.</p>
-<p>In this article, I’ll briefly introduce the motivation of <em>Mesh Denoising</em> (why we need to denoise the mesh), how to denoise the mesh and discuss how to apply the bilateral filter originating from <em>Image Processing</em> to <em>Mesh Denoising</em>$^{[1]}$.</p>
-<h3 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h3><p>At first glance, it may seem strange that Polygon meshes, which are used to represent 3D objects,  would be noisy as in most cases, those meshed are not sampled or captured in the real world but are constructed by vocational artists using software like <em>Maya</em>, <em>3D Max</em> and etc. </p>
-<p>But with the proliferation of 3D printing and 3D scanning,  the interactions between objects in the real world and digital models are becoming more and more frequent especially transforming objects into digital models e.g. polygon meshes.  As we know, gathering discrete data from the real world may introduce noises and those scanned meshes are no exceptions.  We may lose some information  which may cause the mesh to be rough during scanning the model.</p>
-<p><img src="https://github.com/UI233/imageTemp/raw/master/noisy_sphere.png" alt></p>
-<center><em>Fig1. Noisy Sphere from wiki https://en.wikipedia.org/wiki/Geometry_processing
-</em></center>
+<h2 class="archive-title tag">Mesh denoising</h2>
 
 
-<p>To get the accurate surface from the noisy meshes, we need to smooth those artifact out. But…what should we do to achieve that purpose.</p>
-<h3 id="Denoise-the-Mesh"><a href="#Denoise-the-Mesh" class="headerlink" title="Denoise the Mesh"></a>Denoise the Mesh</h3><p>In <em>Signal Processing</em> we ‘hate’ high-frequency signal, because we need much more </p>
-<h3 id="Bilateral"><a href="#Bilateral" class="headerlink" title="Bilateral"></a>Bilateral</h3><script type="math/tex; mode=display">
-I(P) =  \frac{\sum_{P^{\star}} W_c(\| P - P^{\star} \|)W_s(I(P^{\star}))I(P^{\star}) }{\sum_{P^{\star}}W_c(\| P - P^{\star} \|)W_s(I(P^{\star}))}</script><h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Shachar Fleishman, Iddo Drori, Daniel Cohen-Or. 2003. <strong>Bilateral Mesh Denoising</strong>. In <em>Siggraph 2003</em></p>
-<p>[2] </p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
+  <div class="archive">
+    
+      <article class="post">
+        <div class="post-content">
+          <header>
+            <div class="icon"></div>
+            <time datetime="2019-03-03T00:57:25.000Z"><a href="/Polygon/2019/03/03/Smooth-the-Mesh/">2019-03-03</a></time>
+            
+              <h1 class="title"><a href="/Polygon/2019/03/03/Smooth-the-Mesh/">Smooth the Mesh</a></h1>
+            
+          </header>
+        </div>
+      </article>
+    
   </div>
-</article>
-
-
-
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2019-03-02T15:01:46.063Z"><a href="/Polygon/2019/03/02/hello-world/">2019-03-02</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/Polygon/2019/03/02/hello-world/">Hello World</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <h3 id="Who-I-Am"><a href="#Who-I-Am" class="headerlink" title="Who I Am"></a>Who I Am</h3><p>My name is <strong>Polygon</strong> and my creator is <strong>UI</strong> who is also the master of this blog!</p>
-<h3 id="What-I-Am-Doing"><a href="#What-I-Am-Doing" class="headerlink" title="What I Am Doing"></a>What I Am Doing</h3><p>My duty is to record every move my master made in learning <strong>Programming</strong>, <strong>Graphics</strong> and etc.</p>
-<h3 id="WARNING"><a href="#WARNING" class="headerlink" title="WARNING!"></a>WARNING!</h3><p>I’m still learning to how to write good technical article in English, so there may be some bug(s) in my essay which couldn’t make me crush but your mood…</p>
-<p>So when you find them, take it easy and feed me more training sets(x).</p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-
-<nav id="pagination">
-  
-  
-  <div class="clearfix"></div>
-</nav></div></div>
+</div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">

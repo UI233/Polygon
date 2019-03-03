@@ -6,9 +6,7 @@
   <title>Smooth the Mesh | Polygon</title>
   <meta name="author" content="uiui">
   
-  <meta name="description" content="MotivationOverview$ f(x) = a+b$
-Bilateral
-I(P) =  \frac{\sum_{P^{\star}} W_c(\| P - P^{\star} \|)W_s(I(P^{\star}))I(P^{\star}) }{\sum_{P^{\star}}W_c(\">
+  <meta name="description" content="OverviewI recently got interested in the field Geometry Processing and  I decided to start my learning on Geometry Processing from a relatively simple">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -63,9 +61,21 @@ I(P) =  \frac{\sum_{P^{\star}} W_c(\| P - P^{\star} \|)W_s(I(P^{\star}))I(P^{\st
     </header>
     <div class="entry">
       
-        <h3 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h3><h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>$ f(x) = a+b$</p>
+        <h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>I recently got interested in the field <em>Geometry Processing</em> and  I decided to start my learning on <em>Geometry Processing</em> from a relatively simple topic — <em>Mesh Denoising</em>, which may sound strange for most people.</p>
+<p>In this article, I’ll briefly introduce the motivation of <em>Mesh Denoising</em> (why we need to denoise the mesh), how to denoise the mesh and discuss how to apply the bilateral filter originating from <em>Image Processing</em> to <em>Mesh Denoising</em>$^{[1]}$.</p>
+<h3 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h3><p>At first glance, it may seem strange that Polygon meshes, which are used to represent 3D objects,  would be noisy as in most cases, those meshed are not sampled or captured in the real world but are constructed by vocational artists using software like <em>Maya</em>, <em>3D Max</em> and etc. </p>
+<p>But with the proliferation of 3D printing and 3D scanning,  the interactions between objects in the real world and digital models are becoming more and more frequent especially transforming objects into digital models e.g. polygon meshes.  As we know, gathering discrete data from the real world may introduce noises and those scanned meshes are no exceptions.  We may lose some information  which may cause the mesh to be rough during scanning the model.</p>
+<p><img src="https://github.com/UI233/imageTemp/raw/master/noisy_sphere.png" alt></p>
+<center><em>Fig1. Noisy Sphere from wiki https://en.wikipedia.org/wiki/Geometry_processing
+</em></center>
+
+
+<p>To get the accurate surface from the noisy meshes, we need to smooth those artifact out. But…what should we do to achieve that purpose.</p>
+<h3 id="Denoise-the-Mesh"><a href="#Denoise-the-Mesh" class="headerlink" title="Denoise the Mesh"></a>Denoise the Mesh</h3><p>In <em>Signal Processing</em> we ‘hate’ high-frequency signal, because we need much more </p>
 <h3 id="Bilateral"><a href="#Bilateral" class="headerlink" title="Bilateral"></a>Bilateral</h3><script type="math/tex; mode=display">
-I(P) =  \frac{\sum_{P^{\star}} W_c(\| P - P^{\star} \|)W_s(I(P^{\star}))I(P^{\star}) }{\sum_{P^{\star}}W_c(\| P - P^{\star} \|)W_s(I(P^{\star}))}</script>
+I(P) =  \frac{\sum_{P^{\star}} W_c(\| P - P^{\star} \|)W_s(I(P^{\star}))I(P^{\star}) }{\sum_{P^{\star}}W_c(\| P - P^{\star} \|)W_s(I(P^{\star}))}</script><h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Shachar Fleishman, Iddo Drori, Daniel Cohen-Or. 2003. <strong>Bilateral Mesh Denoising</strong>. In <em>Siggraph 2003</em></p>
+<p>[2] </p>
+
       
     </div>
     <footer>
@@ -74,7 +84,7 @@ I(P) =  \frac{\sum_{P^{\star}} W_c(\| P - P^{\star} \|)W_s(I(P^{\star}))I(P^{\st
         
   
   <div class="tags">
-    <a href="/Polygon/tags/Graphics/">Graphics</a>
+    <a href="/Polygon/tags/Graphics/">Graphics</a>, <a href="/Polygon/tags/Geometry-Processing/">Geometry Processing</a>, <a href="/Polygon/tags/Mesh-denoising/">Mesh denoising</a>
   </div>
 
         
@@ -138,7 +148,11 @@ I(P) =  \frac{\sum_{P^{\star}} W_c(\| P - P^{\star} \|)W_s(I(P^{\star}))I(P^{\st
   <h3 class="title">Tags</h3>
   <ul class="entry">
   
+    <li><a href="/Polygon/tags/Geometry-Processing/">Geometry Processing</a><small>1</small></li>
+  
     <li><a href="/Polygon/tags/Graphics/">Graphics</a><small>1</small></li>
+  
+    <li><a href="/Polygon/tags/Mesh-denoising/">Mesh denoising</a><small>1</small></li>
   
     <li><a href="/Polygon/tags/uiui/">uiui</a><small>1</small></li>
   
